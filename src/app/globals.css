@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-madefor), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-baskerville), Georgia, serif;
+  --font-accent: var(--font-cormorant), Georgia, serif;
+
+  --color-ink: #000000;
+  --color-ink-soft: #2b2b2b;
+  --color-brand: #3d9be9;
+  --color-brand-dark: #1f7fcf;
+  --color-mist: #f7f7f7;
+  --color-line: #9b9b9b;
+  --color-button: #222222;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-[1100px] px-4 sm:px-6;
+  }
+  .btn-dark {
+    @apply inline-flex items-center justify-center rounded-full bg-button px-6 py-2.5 text-[15px] text-white transition-colors hover:bg-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand;
+  }
+  .card-outline {
+    @apply border border-line bg-white;
+  }
+  .heading-section {
+    @apply font-serif text-[32px] leading-tight text-ink sm:text-[40px] lg:text-[42px];
+  }
 }
