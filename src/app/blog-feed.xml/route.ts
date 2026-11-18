@@ -11,7 +11,7 @@ export function GET() {
       <link>${site.url}/post/${p.slug}</link>
       <guid isPermaLink="true">${site.url}/post/${p.slug}</guid>
       <pubDate>${new Date(p.datePublished).toUTCString()}</pubDate>
-      <description>${esc(p.description)}</description>
+      <description>${esc(p.excerpt)}</description>
       <enclosure url="${site.url}${p.image}" type="image/png" length="0"/>
     </item>`,
     )

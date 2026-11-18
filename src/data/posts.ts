@@ -9,8 +9,10 @@ export type PostBlock =
 export type Post = {
   slug: string;
   title: string;
-  /** og:description / schema description exactly as published */
+  /** og:description / schema description exactly as published (Wix strips the spaces between blocks) */
   description: string;
+  /** Card excerpt as shown on the live blog listing: first 480 chars of the post text, blocks joined by spaces */
+  excerpt: string;
   image: string;
   /** Original absolute og:image URL used on the live site */
   ogImage: string;
@@ -26,6 +28,7 @@ export const posts: Post[] = [
     "slug": "do-i-have-disordered-eating-signs-symptoms-and-how-to-get-help",
     "title": "Disordered Eating and Eating Disorders",
     "description": "Do You Struggle With Food, Weight, or Body Image?Do you, or someone you care about, spend a significant amount of time thinking about food, weight, or body image? Living with these thoughts and behaviors can feel exhausting and overwhelming.Disordered eating and eating disorders are often difficult to recognize and may go unnoticed by others. Sometimes, even family members, friends, or healthcare professionals may unintentionally reinforce these behaviors. Advice such as \"eat less and exercise m",
+    "excerpt": "Do You Struggle With Food, Weight, or Body Image? Do you, or someone you care about, spend a significant amount of time thinking about food, weight, or body image? Living with these thoughts and behaviors can feel exhausting and overwhelming. Disordered eating and eating disorders are often difficult to recognize and may go unnoticed by others. Sometimes, even family members, friends, or healthcare professionals may unintentionally reinforce these behaviors. Advice such as \"e",
     "image": "/images/blog/feed9dd91f.png",
     "datePublished": "2026-06-01T08:07:55.000Z",
     "dateModified": "2026-06-01T08:07:55.000Z",
@@ -213,6 +216,7 @@ export const posts: Post[] = [
     "slug": "when-two-come-together-understanding-sibling-sessions-in-therapy",
     "title": "When Two Come Together: Understanding Sibling Sessions in Therapy",
     "description": "When the body does not receive sufficient nourishment, it naturally responds by increasing hunger and intensifying the focus on food. This can lead to persistent thoughts about eating, often referred to as \"food noise.\"A common pattern associated with disordered eating is the binge–restrict cycle:Restriction → Binge Eating → Feelings of Guilt or Shame → Further RestrictionThis cycle can feel overwhelming and difficult to break. It is important to recognize that these experiences are not a sign o",
+    "excerpt": "When the body does not receive sufficient nourishment, it naturally responds by increasing hunger and intensifying the focus on food. This can lead to persistent thoughts about eating, often referred to as \"food noise.\" A common pattern associated with disordered eating is the binge–restrict cycle: Restriction → Binge Eating → Feelings of Guilt or Shame → Further Restriction This cycle can feel overwhelming and difficult to break. It is important to recognize that these exper",
     "image": "/images/blog/21b2bd051a.png",
     "datePublished": "2026-06-01T07:56:24.000Z",
     "dateModified": "2026-06-01T07:56:24.000Z",
@@ -329,6 +333,7 @@ export const posts: Post[] = [
     "slug": "journaling-is-more-than-just-words",
     "title": "Journaling is More Than Just Words",
     "description": "An Introduction to Visual JournalingMany of us grew up with a traditional understanding of journaling—a notebook, a pen, and pages filled with written thoughts. While written journaling offers many well-established benefits, it is not the only way to reflect, process emotions, and express what is happening internally.For individuals who find blank pages intimidating, think more visually than verbally, or struggle to put their experiences into words, visual journaling can be a powerful and transf",
+    "excerpt": "An Introduction to Visual Journaling Many of us grew up with a traditional understanding of journaling—a notebook, a pen, and pages filled with written thoughts. While written journaling offers many well-established benefits, it is not the only way to reflect, process emotions, and express what is happening internally. For individuals who find blank pages intimidating, think more visually than verbally, or struggle to put their experiences into words, visual journaling can be",
     "image": "/images/blog/15341e19aa.png",
     "datePublished": "2026-06-01T07:42:22.000Z",
     "dateModified": "2026-06-01T07:42:22.000Z",
@@ -468,6 +473,7 @@ export const posts: Post[] = [
     "slug": "anxiety-isn-t-the-enemy-you-think-it-is",
     "title": "Anxiety isn’t the enemy you think it is",
     "description": "Understanding the Different Faces of AnxietyWhy Some Anxiety Is a Natural and Necessary Part of LifeIn today's world, anxiety is often viewed as something that needs to be eliminated, suppressed, or overcome. However, anxiety is one of the body's oldest and most adaptive protective systems. Rather than asking how to get rid of anxiety entirely, it can be more helpful to understand its purpose and learn when it becomes problematic.The Many Forms of AnxietyNot all anxiety presents in the same way.",
+    "excerpt": "Understanding the Different Faces of Anxiety Why Some Anxiety Is a Natural and Necessary Part of Life In today's world, anxiety is often viewed as something that needs to be eliminated, suppressed, or overcome. However, anxiety is one of the body's oldest and most adaptive protective systems. Rather than asking how to get rid of anxiety entirely, it can be more helpful to understand its purpose and learn when it becomes problematic. The Many Forms of Anxiety Not all anxiety p",
     "image": "/images/blog/d1a43652c3.png",
     "datePublished": "2026-06-01T07:28:52.000Z",
     "dateModified": "2026-06-01T07:28:52.000Z",
@@ -679,6 +685,7 @@ export const posts: Post[] = [
     "slug": "overworked-overscheduled-overwhelmed",
     "title": "Overworked, Overscheduled, Overwhelmed",
     "description": "Learning to Slow Down in a Culture That Never StopsThere is a unique kind of exhaustion that does not come from a demanding workday or a poor night's sleep. It comes from never truly stopping. From moving continuously from one responsibility to the next—responding to emails, attending meetings, managing family commitments, completing daily tasks—and rarely experiencing a moment that feels entirely your own.It is the exhaustion that comes from living at the pace of constant demands rather than at",
+    "excerpt": "Learning to Slow Down in a Culture That Never Stops There is a unique kind of exhaustion that does not come from a demanding workday or a poor night's sleep. It comes from never truly stopping. From moving continuously from one responsibility to the next—responding to emails, attending meetings, managing family commitments, completing daily tasks—and rarely experiencing a moment that feels entirely your own. It is the exhaustion that comes from living at the pace of constant ",
     "image": "/images/blog/fb6177333f.png",
     "datePublished": "2026-06-01T07:09:45.000Z",
     "dateModified": "2026-06-01T07:09:45.000Z",

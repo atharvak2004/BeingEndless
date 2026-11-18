@@ -137,7 +137,7 @@ export function BlogCard({ post, headingAs: H = "h3" }: { post: Post; headingAs?
             {post.title}
           </Link>
         </H>
-        <p className="mt-3 line-clamp-3 text-[14px] leading-relaxed">{post.description}</p>
+        <p className="mt-3 line-clamp-3 text-[14px] leading-relaxed">{post.excerpt}</p>
       </div>
     </article>
   );
